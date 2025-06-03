@@ -3,7 +3,7 @@
   <head>
     <title>Book Haven Bookstore - About Us</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
     <script src="https://kit.fontawesome.com/34c2d0a39f.js" crossorigin="anonymous"></script>
@@ -11,17 +11,22 @@
   <body>
     <header>
       <nav>
-        <img
-          src="images/logo.png"
-          height="50"
-          width="50"
-          alt="Book Haven Bookstore Logo"
-        />
-        <h1>Book Haven Bookstore</h1>
-        <p>About Us</p>
-        <a href="/index.html" aria-label="link to home page">Home</a>
-        <a href="/Gallery.html" aria-label="link to Gallery page">Gallery</a>
-        <a href="/Events.html" aria-label="link to events page">Events</a>
+        <div class="header-nav-left">
+          <img
+            src="images/logo.png"
+            height="50"
+            width="50"
+            alt="Book Haven Bookstore Logo"
+          />
+          <h1>Book Haven Bookstore</h1>
+          <p>About Us</p>
+        </div>
+        <div class="header-nav-right"> 
+          <a href="/index.html" aria-label="link to home page">Home</a>
+          <a href="/About Us.html" aria-label="link to About Us page">About Us</a>
+          <a href="/Gallery.html" aria-label="link to Gallery page">Gallery</a>
+          <a href="/Events.html" aria-label="link to events page">Events</a>
+        </div>
       </nav>
     </header>
     <main>
@@ -39,7 +44,7 @@
         </section>
         <section class="contact-form">
             <h1>Feedback and custom orders</h1>
-           <form action="">
+           <form>
             <label for="name">Name</label><br/>
             <input name="name" id="name" type="text" /><br/>
             <label for="surname">Surname</label><br/>
@@ -48,12 +53,12 @@
             <input name="email" id="email" type="email" /><br/>
             <label for="message">Message</label><br/>
             <textarea name="message" id="message"></textarea><br/>
-            <input type="submit" value="Submit" alt="Submit button" />
+            <input class="feedback-form-submit" type="submit" value="Submit" alt="Submit button" />
            </form> 
         </section>
     </main>
     <footer>
-      <div>
+      <div class="logo-terms">
         <img
           src="images/logo.png"
           height="50"
@@ -66,8 +71,9 @@
       <form>
         <p>Subscribe to our newsletter</p>
         <label>Email: <input type="email" /></label><br />
-        <input type="submit" value="Subscribe" alt="Submit button" />
+        <input class="footer-form-submit" type="submit" value="Subscribe" />
       </form>
+      <div class="icons-links">
       <div class="social-icons">
         <a href="https://www.twitter.com">
           <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
@@ -83,10 +89,12 @@
         </a>
       </div>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/Gallery.html">Gallery</a>
-        <a href="/Events.html">Events</a>
+        <a href="/index.html" aria-label="link to home page">Home</a>
+        <a href="/About Us.html" aria-label="link to About Us page">About Us</a>
+        <a href="/Gallery.html" aria-label="link to Gallery page">Gallery</a>
+        <a href="/Events.html" aria-label="link to events page">Events</a>
       </nav>
+    </div>
     </footer>
   </body>
 </html>
