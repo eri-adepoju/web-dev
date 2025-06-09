@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
     <script src="https://kit.fontawesome.com/34c2d0a39f.js" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <header>
@@ -28,11 +28,19 @@
           <a href="/Events.html" aria-label="link to events page">Events</a>
         </div>
       </nav>
-      <button>View Cart</button>
+      <button id="view-cart">View Cart</button>
     </header>
     <main>
+      <dialog id="cart-dialog" class="cart-modal">
+        <h1>Cart</h1>
+        <div id="cart-table"></div>
+        <div class="cart-buttons">
+          <button class="clear-cart-button" id="clear-cart-button">Clear Cart</button>
+          <button class="process-order-button" id ="process-order-button">Process Order</button>
+        </div>
+      </dialog>
       <h1>All Products</h1>
-        <div class="table">
+        <div class="table" >
           <div class="row">
                 <div class="cell">
                     <img src="images/Client3_Book1.png" 
@@ -46,13 +54,13 @@
                     height="100"
                     width="150"alt="Glory Riders, a book about bikers">
                     <p>Glory Riders, a book about bikers</p>
-                    <button class="add-to-cart" data-value="Glory Riders">Add to cart</button>
+                    <button  class="add-to-cart" data-value="Glory Riders">Add to cart</button>
                 </div>
                 <div class="cell">
                   <img src="images/Client3_Book3.png" 
                   height="100"
                   width="150"alt="Sorcerer's Shadowed Chronicles, a fantasy books">
-                  <p>Sorcerer's Shadowed Chronicles, a fantasy books</p>
+                  <p>Sorcerer's Shadowed Chronicles, a fantasy book</p>
                   <button class="add-to-cart" data-value="Sorcerer's Shadowed Chronicles">Add to cart</button>
               </div>
           </div>
@@ -69,14 +77,14 @@
                 height="100"
                 width="150"alt="Travel, a magazine for travelers">
                 <p>Travel, a magazine for travelers</p>
-                <button class="add-to-cart" data-value="Travel">Add to cart</button>
+                <button  class="add-to-cart" data-value="Travel">Add to cart</button>
             </div>
             <div class="cell">
               <img src="images/Client3_Magazine3.png" 
               height="100"
               width="150"alt="Eat., a magazine for foodies">
               <p>Eat., a magazine for foodies</p>
-              <button  class="add-to-cart" data-value="Eat">Add to cart</button>
+              <button   class="add-to-cart" data-value="Eat">Add to cart</button>
           </div>
           </div>
           <div class="row">
@@ -85,39 +93,25 @@
                 height="100"
                 width="150"alt="A canvas tote bag with black lettering that says ALL I DO IS READ READ READ">
                 <p>A canvas tote bag with black lettering that says ALL I DO IS READ READ READ</p>
-                <button class="add-to-cart" data-value="Tote">Add to cart</button>
+                <button   class="add-to-cart" data-value="Tote">Add to cart</button>
             </div>
             <div class="cell">
                 <img src="images/Client3_Notebook.png" 
                 height="100"
                 width="150"alt="A notebook with text on the cover that says Book Haven Bookstore">
                 <p>A notebook with text on the cover that says Book Haven Bookstore</p>
-                <button class="add-to-cart" data-value="Notebook">Add to cart</button>
+                <button   class="add-to-cart" data-value="Notebook">Add to cart</button>
             </div>
             <div class="cell">
               <img src="images/Client3_Stickers.png" 
               height="100"
               width="150"alt="A set of four Book Haven Bookstore stickers that promote reading">
               <p>A set of four Book Haven Bookstore stickers that promote reading</p>
-              <button class="add-to-cart" data-value="Stickers">Add to cart</button>
+              <button   class="add-to-cart" data-value="Stickers">Add to cart</button>
           </div>
           </div>
         </div>
       </div>
-      <dialog class="added-to-cart">
-        <button autofocus>Close</button>
-        <p>Item added!</p>
-      </dialog>
-      <dialog class="order-processed">
-        <button autofocus>Close</button>
-        <p>Thank you for your order!</p>
-      </dialog>
-      <dialog class="cart">
-        <button autofocus>Close</button>
-        <h2>Cart</p>
-        <button>Clear Cart</button>
-        <button>Process Order</button>
-      </dialog>
     </main>
     <footer>
       <div class="logo-terms">
@@ -130,10 +124,10 @@
         <p>2010-2025</p>
         <p>Privacy Terms</p>
       </div>
-      <form>
+      <form id="subscribe-form">
         <p>Subscribe to our newsletter</p>
-        <label>Email: <input type="email" /></label><br />
-        <input class="footer-form-submit" type="submit" value="Subscribe" />
+        <label>Email: <input type="email" required/></label><br />
+        <button class="footer-form-submit" type="submit">Subscribe</button>
       </form>
       <div class="icons-links">
       <div class="social-icons">

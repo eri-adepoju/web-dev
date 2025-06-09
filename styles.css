@@ -132,7 +132,7 @@ header nav  a:hover, footer nav a:hover, nav a[aria-current='page'], a.active {
   border-color: #742c36;
 }
 
-.button:hover, .categories > .flex-container a:hover, .add-to-cart:hover{
+.button:hover, .categories > .flex-container a:hover, .add-to-cart:hover, .clear-cart-button:hover, .process-order-button:hover{
   background-color: #5c2e5c;
   color:white
 }
@@ -162,7 +162,7 @@ footer form{
   text-align: center;
 }
 
-.footer-form-submit, .feedback-form-submit, header button, .add-to-cart{
+.footer-form-submit, .feedback-form-submit, header button, .add-to-cart, .clear-cart-button, .process-order-button{
   border: solid;
   border-color: #3f5461;
   padding: 10px 14px;
@@ -179,11 +179,11 @@ footer form{
   color: white;
 }
 
-.description h1, .contact-form h1, .promos h1, main h1{
+.description h1, .contact-form-section h1, .promos h1, main h1{
   text-align: center
 }
 
-.description, .contact-form{
+.description, .contact-form-section{
   padding: 1rem;
   display: flex;
   gap: 1rem;
@@ -220,4 +220,18 @@ footer form{
   border: 1px solid #ddd;
   text-align: center;
   padding: 8px;
+}
+
+table, td, th{
+  border: 1px solid #131C26;
+}
+
+
+table{
+  border-collapse: collapse;
+  margin: 2rem;
+}
+
+.cart-modal{
+  text-align: center;
 }
