@@ -93,8 +93,11 @@ header nav h1 {
   text-align: center;
   padding: 25px 10px;
   width: 150px;
-  color: #171717;
-  background-color: #9e9e9e;
+  background-color: #3f5461;
+}
+
+.burger-menu .burger-menu-links a{
+  color: white;
 }
 
 .burger-menu:hover .burger-menu-links{
@@ -218,8 +221,12 @@ footer form{
   display: flex;
   gap: 1rem;
   flex-direction:column;
-  text-align: center;
 }
+
+.contact-form-section{
+  align-items: center;
+  text-align: left;
+} 
 
 .event{
   border: solid;
@@ -277,10 +284,6 @@ table{
 
   header nav h1 {
     width: auto;
-  }
-  .contact-form-section{
-    display: flex;
-    align-items: center;
   }
 
   .flex-container{
